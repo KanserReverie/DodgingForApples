@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 2774163662783718461}
   - component: {fileID: 6008902152138285116}
   m_Layer: 0
-  m_Name: Kiki-v2
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
