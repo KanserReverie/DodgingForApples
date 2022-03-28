@@ -1066,6 +1066,7 @@ MonoBehaviour:
   OrbitCamera: {fileID: 7996410774880288592}
   CameraFollowPoint: {fileID: 1588738886659723184}
   Character: {fileID: 6008902152138285116}
+  lookOnlyUsingKeyboard: 0
 --- !u!1 &1984342970877947597
 GameObject:
   m_ObjectHideFlags: 0

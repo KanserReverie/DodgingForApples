@@ -49,21 +49,22 @@ namespace DodgingForApples
         private void HandleCameraInput()
         {
             Vector3 lookInputVector = new Vector3();
+
             if(lookOnlyUsingKeyboard)
+            {
+                //PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
+                // Build the CharacterInputs struct
+                //characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
+                //characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
+                //lookInputVector = new Vector3(Input.GetAxisRaw(VerticalInput), Input.GetAxisRaw(HorizontalInput), 0f);
+                lookInputVector = new Vector3(73.44f, 0, 0);
+            }
+            else
             {
                 // Create the look input vector for the camera
                 float mouseLookAxisUp = Input.GetAxisRaw(MouseYInput);
                 float mouseLookAxisRight = Input.GetAxisRaw(MouseXInput);
-                 lookInputVector = new Vector3(mouseLookAxisRight, mouseLookAxisUp, 0f);
-            }
-            else
-            {
-                PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
-
-                // Build the CharacterInputs struct
-                characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
-                characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-                 lookInputVector = new Vector3(Input.GetAxisRaw(VerticalInput), Input.GetAxisRaw(HorizontalInput), 0f);
+                lookInputVector = new Vector3(mouseLookAxisRight, mouseLookAxisUp, 0f);
             }
 
 
