@@ -29,8 +29,8 @@ namespace SD
         
         void Awake()
         {
-            m_Rigidbody = GetComponent<Rigidbody>();
-            m_Animator = GetComponent<Animator>();     
+            m_Rigidbody = GetComponentInChildren<Rigidbody>();
+            m_Animator = GetComponentInChildren<Animator>();     
             camTrans = Camera.main.transform;     
         }
       
