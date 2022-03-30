@@ -24,14 +24,24 @@ namespace DodgingForApples
         {
             Refresh_appleSpawnPoints();
             Check_maxNumberOfApples_IsntTooLarge();
-            SpawnAllApples();
+            SpawnMaxNumberOfApples();
+            InvokeRepeating(nameof(SpawnMaxNumberOfApples), 5,2);
         }
 
-        private void SpawnAllApples()
+        private void SpawnMaxNumberOfApples()
         {
-            for(int i = 0; i < maxNumberOfApples; i++)
+            if(numberOfApplesInScene < maxNumberOfApples)
             {
-                   SpawnApple();
+                while(numberOfApplesInScene < maxNumberOfApples)
+                {
+                    SpawnApple();
+                    numberOfApplesInScene++;
+                }
+                Debug.Log("Apples Spawned In");
+            }
+            else
+            {
+                Debug.Log("No Apples Need to be spawned");
             }
         }
 
@@ -47,9 +57,17 @@ namespace DodgingForApples
                 Debug.LogWarning("Sorry, no vacant Apple Spawn Points."); return; }
             
             int randomVacantAppleSpawnPoint = vacentAppleSpawnPointIndexs[Random.Range(0, vacentAppleSpawnPointIndexs.Count)];
-            
-            print($"randomVacantAppleSpawnPoint = {randomVacantAppleSpawnPoint}");
-            Instantiate(applePrefab, appleSpawnPoints[randomVacantAppleSpawnPoint].SpawnLocation, Quaternion.identity);
+
+            SpawnAppleAt(randomVacantAppleSpawnPoint);
+        }
+
+        private void SpawnAppleAt(int _AppleSpawnPoint)
+        {
+            GameObject appleSpawnedIn = Instantiate(applePrefab, appleSpawnPoints[_AppleSpawnPoint].SpawnLocation, Quaternion.identity);
+            Apple appleMade = appleSpawnedIn.GetComponent(typeof(Apple)) as Apple;
+            appleMade.appleSpawnPointIndex = _AppleSpawnPoint;
+            appleMade.spawnPoint = appleSpawnPoints[_AppleSpawnPoint].gameObject;
+            appleSpawnPoints[_AppleSpawnPoint].appleAtLocation = true;
         }
 
         private List<int> CheckVacentSpawnPoints()
