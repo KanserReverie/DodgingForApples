@@ -99,7 +99,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.002
+    - _Outline: 0.0002
     - _OutlineWidth: 0.0015
     - _Parallax: 0.02
     - _QueueOffset: 0
@@ -123,3 +123,4 @@ Material:
     - _IndirectLightConstColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _OutlineColor: {r: 0.29999998, g: 0.29999998, b: 0.29999998, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
