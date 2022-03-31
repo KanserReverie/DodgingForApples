@@ -8009,7 +8009,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19326
+  m_Name: pb_Mesh21608
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8178,6 +8178,10 @@ PrefabInstance:
       propertyPath: MeshRoot
       value: 
       objectReference: {fileID: 1452148727}
+    - target: {fileID: 6701284549903884550, guid: 139e21c4400c7b94482745495377cdf7, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 6701284551609663393, guid: 139e21c4400c7b94482745495377cdf7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8225,6 +8229,10 @@ PrefabInstance:
     - target: {fileID: 6701284551609663394, guid: 139e21c4400c7b94482745495377cdf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996410774880288592, guid: 139e21c4400c7b94482745495377cdf7, type: 3}
+      propertyPath: ObstructionLayers.m_Bits
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8010350592065231668, guid: 139e21c4400c7b94482745495377cdf7, type: 3}
       propertyPath: m_Depth
