@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appleSpawnPoints:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   maxNumberOfApples: 1
   numberOfApplesInScene: 0
-  applePrefab: {fileID: 0}
+  applePrefab: {fileID: 6013172289674650078, guid: b27fa2f343606af4eb4ef44a033536df, type: 3}
