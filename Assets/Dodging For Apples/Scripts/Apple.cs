@@ -9,5 +9,13 @@ namespace DodgingForApples
     {
         [ReadOnly] public int appleSpawnPointIndex;
         [ReadOnly] public GameObject spawnPoint;
+
+        private void OnCollisionStay(Collision collision)
+        {
+            if(collision.transform.tag == "Player")
+            {
+                collision.gameObject.GetComponentInChildren<Player>();
+            }
+        }
     }
 }
